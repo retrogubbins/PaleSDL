@@ -1,0 +1,255 @@
+# Project: PALESDL
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = PALESDL_private.res
+OBJ  = PALESDL_GUI.o PALESDL_VID.o PALESDL_IO.o PALESDL.o PALESDL_CONFIG.o PALE48K.o PALEMEM.o PALEROM.o PALE96K.o PALE_FLTKGUI.o RAZE_HELPER.o PALE_KEYS.o PALETAPS.o PALE128K.o PALESND.o PALEDISK.o PALERAWTAPE.o sge_surface.o sge_rotation.o sge_blib.o sge_primitives.o libdsk-1.1.5/lib/rpcwin32.o libdsk-1.1.5/lib/compgz.o libdsk-1.1.5/lib/compress.o libdsk-1.1.5/lib/compsq.o libdsk-1.1.5/lib/crc16.o libdsk-1.1.5/lib/crctable.o libdsk-1.1.5/lib/drvadisk.o libdsk-1.1.5/lib/drvcfi.o libdsk-1.1.5/lib/drvcpcem.o libdsk-1.1.5/lib/drvdos16.o libdsk-1.1.5/lib/drvdos32.o libdsk-1.1.5/lib/drvlinux.o libdsk-1.1.5/lib/drvmyz80.o libdsk-1.1.5/lib/drvntwdm.o libdsk-1.1.5/lib/drvnwasp.o libdsk-1.1.5/lib/drvposix.o libdsk-1.1.5/lib/drvqm.o libdsk-1.1.5/lib/drvrcpm.o libdsk-1.1.5/lib/drvwin16.o libdsk-1.1.5/lib/drvwin32.o libdsk-1.1.5/lib/dskcheck.o libdsk-1.1.5/lib/dskcmt.o libdsk-1.1.5/lib/dskdirty.o libdsk-1.1.5/lib/dskerror.o libdsk-1.1.5/lib/dskfmt.o libdsk-1.1.5/lib/dskgeom.o libdsk-1.1.5/lib/dskjni.o libdsk-1.1.5/lib/dsklphys.o libdsk-1.1.5/lib/dskopen.o libdsk-1.1.5/lib/dskpars.o libdsk-1.1.5/lib/dskread.o libdsk-1.1.5/lib/dskreprt.o libdsk-1.1.5/lib/dskretry.o libdsk-1.1.5/lib/dskrtrd.o libdsk-1.1.5/lib/dsksecid.o libdsk-1.1.5/lib/dskseek.o libdsk-1.1.5/lib/dsksgeom.o libdsk-1.1.5/lib/dskstat.o libdsk-1.1.5/lib/dsktread.o libdsk-1.1.5/lib/dsktrkid.o libdsk-1.1.5/lib/dskwrite.o libdsk-1.1.5/lib/error.o libdsk-1.1.5/lib/remote.o libdsk-1.1.5/lib/rpccli.o libdsk-1.1.5/lib/rpcfork.o libdsk-1.1.5/lib/rpcfossl.o libdsk-1.1.5/lib/rpcmap.o libdsk-1.1.5/lib/rpcpack.o libdsk-1.1.5/lib/rpcserv.o libdsk-1.1.5/lib/rpctios.o libdsk-1.1.5/lib/compbz2.o KOGEL/z80.o KOGEL/KOGELMEM.o KOGEL/KOGELIO.o $(RES)
+LINKOBJ  = PALESDL_GUI.o PALESDL_VID.o PALESDL_IO.o PALESDL.o PALESDL_CONFIG.o PALE48K.o PALEMEM.o PALEROM.o PALE96K.o PALE_FLTKGUI.o RAZE_HELPER.o PALE_KEYS.o PALETAPS.o PALE128K.o PALESND.o PALEDISK.o PALERAWTAPE.o sge_surface.o sge_rotation.o sge_blib.o sge_primitives.o libdsk-1.1.5/lib/rpcwin32.o libdsk-1.1.5/lib/compgz.o libdsk-1.1.5/lib/compress.o libdsk-1.1.5/lib/compsq.o libdsk-1.1.5/lib/crc16.o libdsk-1.1.5/lib/crctable.o libdsk-1.1.5/lib/drvadisk.o libdsk-1.1.5/lib/drvcfi.o libdsk-1.1.5/lib/drvcpcem.o libdsk-1.1.5/lib/drvdos16.o libdsk-1.1.5/lib/drvdos32.o libdsk-1.1.5/lib/drvlinux.o libdsk-1.1.5/lib/drvmyz80.o libdsk-1.1.5/lib/drvntwdm.o libdsk-1.1.5/lib/drvnwasp.o libdsk-1.1.5/lib/drvposix.o libdsk-1.1.5/lib/drvqm.o libdsk-1.1.5/lib/drvrcpm.o libdsk-1.1.5/lib/drvwin16.o libdsk-1.1.5/lib/drvwin32.o libdsk-1.1.5/lib/dskcheck.o libdsk-1.1.5/lib/dskcmt.o libdsk-1.1.5/lib/dskdirty.o libdsk-1.1.5/lib/dskerror.o libdsk-1.1.5/lib/dskfmt.o libdsk-1.1.5/lib/dskgeom.o libdsk-1.1.5/lib/dskjni.o libdsk-1.1.5/lib/dsklphys.o libdsk-1.1.5/lib/dskopen.o libdsk-1.1.5/lib/dskpars.o libdsk-1.1.5/lib/dskread.o libdsk-1.1.5/lib/dskreprt.o libdsk-1.1.5/lib/dskretry.o libdsk-1.1.5/lib/dskrtrd.o libdsk-1.1.5/lib/dsksecid.o libdsk-1.1.5/lib/dskseek.o libdsk-1.1.5/lib/dsksgeom.o libdsk-1.1.5/lib/dskstat.o libdsk-1.1.5/lib/dsktread.o libdsk-1.1.5/lib/dsktrkid.o libdsk-1.1.5/lib/dskwrite.o libdsk-1.1.5/lib/error.o libdsk-1.1.5/lib/remote.o libdsk-1.1.5/lib/rpccli.o libdsk-1.1.5/lib/rpcfork.o libdsk-1.1.5/lib/rpcfossl.o libdsk-1.1.5/lib/rpcmap.o libdsk-1.1.5/lib/rpcpack.o libdsk-1.1.5/lib/rpcserv.o libdsk-1.1.5/lib/rpctios.o libdsk-1.1.5/lib/compbz2.o KOGEL/z80.o KOGEL/KOGELMEM.o KOGEL/KOGELIO.o $(RES)
+LIBS =  -L"D:/Dev-Cpp/lib" -mwindows -lfltk_images -lfltk -lwsock32 -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lmsimg32 RAZE/RAZE.O ../Dev-Cpp/lib/SDL/SDL.lib  -g3 
+INCS =  -I"D:/Dev-Cpp/include"  -I"D:/Dev-Cpp/include/SDL/include" 
+CXXINCS =  -I"D:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"D:/Dev-Cpp/include/c++/3.4.2/backward"  -I"D:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"D:/Dev-Cpp/include/c++/3.4.2"  -I"D:/Dev-Cpp/include" 
+BIN  = PALESDL.exe
+CXXFLAGS = $(CXXINCS)   -g3
+CFLAGS = $(INCS) -DWIN32_EXTRA_LEAN -DWIN32 -W -D_MSC_DLL -fno-exceptions -g -O0 -D_DEBUG -D_WIN32   -g3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before PALESDL.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "PALESDL.exe" $(LIBS)
+
+PALESDL_GUI.o: PALESDL_GUI.CXX
+	$(CPP) -c PALESDL_GUI.CXX -o PALESDL_GUI.o $(CXXFLAGS)
+
+PALESDL_VID.o: PALESDL_VID.CXX
+	$(CPP) -c PALESDL_VID.CXX -o PALESDL_VID.o $(CXXFLAGS)
+
+PALESDL_IO.o: PALESDL_IO.C
+	$(CPP) -c PALESDL_IO.C -o PALESDL_IO.o $(CXXFLAGS)
+
+PALESDL.o: PALESDL.C
+	$(CPP) -c PALESDL.C -o PALESDL.o $(CXXFLAGS)
+
+PALESDL_CONFIG.o: PALESDL_CONFIG.C
+	$(CPP) -c PALESDL_CONFIG.C -o PALESDL_CONFIG.o $(CXXFLAGS)
+
+PALE48K.o: PALE48K.C
+	$(CPP) -c PALE48K.C -o PALE48K.o $(CXXFLAGS)
+
+PALEMEM.o: PALEMEM.C
+	$(CPP) -c PALEMEM.C -o PALEMEM.o $(CXXFLAGS)
+
+PALEROM.o: PALEROM.C
+	$(CPP) -c PALEROM.C -o PALEROM.o $(CXXFLAGS)
+
+PALE96K.o: PALE96K.C
+	$(CPP) -c PALE96K.C -o PALE96K.o $(CXXFLAGS)
+
+PALE_FLTKGUI.o: PALE_FLTKGUI.CXX
+	$(CPP) -c PALE_FLTKGUI.CXX -o PALE_FLTKGUI.o $(CXXFLAGS)
+
+RAZE_HELPER.o: RAZE_HELPER.CXX
+	$(CPP) -c RAZE_HELPER.CXX -o RAZE_HELPER.o $(CXXFLAGS)
+
+PALE_KEYS.o: PALE_KEYS.C
+	$(CPP) -c PALE_KEYS.C -o PALE_KEYS.o $(CXXFLAGS)
+
+PALETAPS.o: PALETAPS.C
+	$(CPP) -c PALETAPS.C -o PALETAPS.o $(CXXFLAGS)
+
+PALE128K.o: PALE128K.C
+	$(CPP) -c PALE128K.C -o PALE128K.o $(CXXFLAGS)
+
+PALESND.o: PALESND.CXX
+	$(CPP) -c PALESND.CXX -o PALESND.o $(CXXFLAGS)
+
+PALEDISK.o: PALEDISK.CXX
+	$(CPP) -c PALEDISK.CXX -o PALEDISK.o $(CXXFLAGS)
+
+PALERAWTAPE.o: PALERAWTAPE.C
+	$(CPP) -c PALERAWTAPE.C -o PALERAWTAPE.o $(CXXFLAGS)
+
+sge_surface.o: sge_surface.cpp
+	$(CPP) -c sge_surface.cpp -o sge_surface.o $(CXXFLAGS)
+
+sge_rotation.o: sge_rotation.cpp
+	$(CPP) -c sge_rotation.cpp -o sge_rotation.o $(CXXFLAGS)
+
+sge_blib.o: sge_blib.cpp
+	$(CPP) -c sge_blib.cpp -o sge_blib.o $(CXXFLAGS)
+
+sge_primitives.o: sge_primitives.cpp
+	$(CPP) -c sge_primitives.cpp -o sge_primitives.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/rpcwin32.o: libdsk-1.1.5/lib/rpcwin32.c
+	$(CPP) -c libdsk-1.1.5/lib/rpcwin32.c -o libdsk-1.1.5/lib/rpcwin32.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/compgz.o: libdsk-1.1.5/lib/compgz.c
+	$(CPP) -c libdsk-1.1.5/lib/compgz.c -o libdsk-1.1.5/lib/compgz.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/compress.o: libdsk-1.1.5/lib/compress.c
+	$(CPP) -c libdsk-1.1.5/lib/compress.c -o libdsk-1.1.5/lib/compress.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/compsq.o: libdsk-1.1.5/lib/compsq.c
+	$(CPP) -c libdsk-1.1.5/lib/compsq.c -o libdsk-1.1.5/lib/compsq.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/crc16.o: libdsk-1.1.5/lib/crc16.c
+	$(CPP) -c libdsk-1.1.5/lib/crc16.c -o libdsk-1.1.5/lib/crc16.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/crctable.o: libdsk-1.1.5/lib/crctable.c
+	$(CPP) -c libdsk-1.1.5/lib/crctable.c -o libdsk-1.1.5/lib/crctable.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvadisk.o: libdsk-1.1.5/lib/drvadisk.c
+	$(CPP) -c libdsk-1.1.5/lib/drvadisk.c -o libdsk-1.1.5/lib/drvadisk.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvcfi.o: libdsk-1.1.5/lib/drvcfi.c
+	$(CPP) -c libdsk-1.1.5/lib/drvcfi.c -o libdsk-1.1.5/lib/drvcfi.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvcpcem.o: libdsk-1.1.5/lib/drvcpcem.c
+	$(CPP) -c libdsk-1.1.5/lib/drvcpcem.c -o libdsk-1.1.5/lib/drvcpcem.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvdos16.o: libdsk-1.1.5/lib/drvdos16.c
+	$(CPP) -c libdsk-1.1.5/lib/drvdos16.c -o libdsk-1.1.5/lib/drvdos16.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvdos32.o: libdsk-1.1.5/lib/drvdos32.c
+	$(CPP) -c libdsk-1.1.5/lib/drvdos32.c -o libdsk-1.1.5/lib/drvdos32.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvlinux.o: libdsk-1.1.5/lib/drvlinux.c
+	$(CPP) -c libdsk-1.1.5/lib/drvlinux.c -o libdsk-1.1.5/lib/drvlinux.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvmyz80.o: libdsk-1.1.5/lib/drvmyz80.c
+	$(CPP) -c libdsk-1.1.5/lib/drvmyz80.c -o libdsk-1.1.5/lib/drvmyz80.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvntwdm.o: libdsk-1.1.5/lib/drvntwdm.c
+	$(CPP) -c libdsk-1.1.5/lib/drvntwdm.c -o libdsk-1.1.5/lib/drvntwdm.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvnwasp.o: libdsk-1.1.5/lib/drvnwasp.c
+	$(CPP) -c libdsk-1.1.5/lib/drvnwasp.c -o libdsk-1.1.5/lib/drvnwasp.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvposix.o: libdsk-1.1.5/lib/drvposix.c
+	$(CPP) -c libdsk-1.1.5/lib/drvposix.c -o libdsk-1.1.5/lib/drvposix.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvqm.o: libdsk-1.1.5/lib/drvqm.c
+	$(CPP) -c libdsk-1.1.5/lib/drvqm.c -o libdsk-1.1.5/lib/drvqm.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvrcpm.o: libdsk-1.1.5/lib/drvrcpm.c
+	$(CPP) -c libdsk-1.1.5/lib/drvrcpm.c -o libdsk-1.1.5/lib/drvrcpm.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvwin16.o: libdsk-1.1.5/lib/drvwin16.c
+	$(CPP) -c libdsk-1.1.5/lib/drvwin16.c -o libdsk-1.1.5/lib/drvwin16.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/drvwin32.o: libdsk-1.1.5/lib/drvwin32.c
+	$(CPP) -c libdsk-1.1.5/lib/drvwin32.c -o libdsk-1.1.5/lib/drvwin32.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskcheck.o: libdsk-1.1.5/lib/dskcheck.c
+	$(CPP) -c libdsk-1.1.5/lib/dskcheck.c -o libdsk-1.1.5/lib/dskcheck.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskcmt.o: libdsk-1.1.5/lib/dskcmt.c
+	$(CPP) -c libdsk-1.1.5/lib/dskcmt.c -o libdsk-1.1.5/lib/dskcmt.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskdirty.o: libdsk-1.1.5/lib/dskdirty.c
+	$(CPP) -c libdsk-1.1.5/lib/dskdirty.c -o libdsk-1.1.5/lib/dskdirty.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskerror.o: libdsk-1.1.5/lib/dskerror.c
+	$(CPP) -c libdsk-1.1.5/lib/dskerror.c -o libdsk-1.1.5/lib/dskerror.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskfmt.o: libdsk-1.1.5/lib/dskfmt.c
+	$(CPP) -c libdsk-1.1.5/lib/dskfmt.c -o libdsk-1.1.5/lib/dskfmt.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskgeom.o: libdsk-1.1.5/lib/dskgeom.c
+	$(CPP) -c libdsk-1.1.5/lib/dskgeom.c -o libdsk-1.1.5/lib/dskgeom.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskjni.o: libdsk-1.1.5/lib/dskjni.c
+	$(CPP) -c libdsk-1.1.5/lib/dskjni.c -o libdsk-1.1.5/lib/dskjni.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dsklphys.o: libdsk-1.1.5/lib/dsklphys.c
+	$(CPP) -c libdsk-1.1.5/lib/dsklphys.c -o libdsk-1.1.5/lib/dsklphys.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskopen.o: libdsk-1.1.5/lib/dskopen.c
+	$(CPP) -c libdsk-1.1.5/lib/dskopen.c -o libdsk-1.1.5/lib/dskopen.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskpars.o: libdsk-1.1.5/lib/dskpars.c
+	$(CPP) -c libdsk-1.1.5/lib/dskpars.c -o libdsk-1.1.5/lib/dskpars.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskread.o: libdsk-1.1.5/lib/dskread.c
+	$(CPP) -c libdsk-1.1.5/lib/dskread.c -o libdsk-1.1.5/lib/dskread.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskreprt.o: libdsk-1.1.5/lib/dskreprt.c
+	$(CPP) -c libdsk-1.1.5/lib/dskreprt.c -o libdsk-1.1.5/lib/dskreprt.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskretry.o: libdsk-1.1.5/lib/dskretry.c
+	$(CPP) -c libdsk-1.1.5/lib/dskretry.c -o libdsk-1.1.5/lib/dskretry.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskrtrd.o: libdsk-1.1.5/lib/dskrtrd.c
+	$(CPP) -c libdsk-1.1.5/lib/dskrtrd.c -o libdsk-1.1.5/lib/dskrtrd.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dsksecid.o: libdsk-1.1.5/lib/dsksecid.c
+	$(CPP) -c libdsk-1.1.5/lib/dsksecid.c -o libdsk-1.1.5/lib/dsksecid.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskseek.o: libdsk-1.1.5/lib/dskseek.c
+	$(CPP) -c libdsk-1.1.5/lib/dskseek.c -o libdsk-1.1.5/lib/dskseek.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dsksgeom.o: libdsk-1.1.5/lib/dsksgeom.c
+	$(CPP) -c libdsk-1.1.5/lib/dsksgeom.c -o libdsk-1.1.5/lib/dsksgeom.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskstat.o: libdsk-1.1.5/lib/dskstat.c
+	$(CPP) -c libdsk-1.1.5/lib/dskstat.c -o libdsk-1.1.5/lib/dskstat.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dsktread.o: libdsk-1.1.5/lib/dsktread.c
+	$(CPP) -c libdsk-1.1.5/lib/dsktread.c -o libdsk-1.1.5/lib/dsktread.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dsktrkid.o: libdsk-1.1.5/lib/dsktrkid.c
+	$(CPP) -c libdsk-1.1.5/lib/dsktrkid.c -o libdsk-1.1.5/lib/dsktrkid.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/dskwrite.o: libdsk-1.1.5/lib/dskwrite.c
+	$(CPP) -c libdsk-1.1.5/lib/dskwrite.c -o libdsk-1.1.5/lib/dskwrite.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/error.o: libdsk-1.1.5/lib/error.c
+	$(CPP) -c libdsk-1.1.5/lib/error.c -o libdsk-1.1.5/lib/error.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/remote.o: libdsk-1.1.5/lib/remote.c
+	$(CPP) -c libdsk-1.1.5/lib/remote.c -o libdsk-1.1.5/lib/remote.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/rpccli.o: libdsk-1.1.5/lib/rpccli.c
+	$(CPP) -c libdsk-1.1.5/lib/rpccli.c -o libdsk-1.1.5/lib/rpccli.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/rpcfork.o: libdsk-1.1.5/lib/rpcfork.c
+	$(CPP) -c libdsk-1.1.5/lib/rpcfork.c -o libdsk-1.1.5/lib/rpcfork.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/rpcfossl.o: libdsk-1.1.5/lib/rpcfossl.c
+	$(CPP) -c libdsk-1.1.5/lib/rpcfossl.c -o libdsk-1.1.5/lib/rpcfossl.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/rpcmap.o: libdsk-1.1.5/lib/rpcmap.c
+	$(CPP) -c libdsk-1.1.5/lib/rpcmap.c -o libdsk-1.1.5/lib/rpcmap.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/rpcpack.o: libdsk-1.1.5/lib/rpcpack.c
+	$(CPP) -c libdsk-1.1.5/lib/rpcpack.c -o libdsk-1.1.5/lib/rpcpack.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/rpcserv.o: libdsk-1.1.5/lib/rpcserv.c
+	$(CPP) -c libdsk-1.1.5/lib/rpcserv.c -o libdsk-1.1.5/lib/rpcserv.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/rpctios.o: libdsk-1.1.5/lib/rpctios.c
+	$(CPP) -c libdsk-1.1.5/lib/rpctios.c -o libdsk-1.1.5/lib/rpctios.o $(CXXFLAGS)
+
+libdsk-1.1.5/lib/compbz2.o: libdsk-1.1.5/lib/compbz2.c
+	$(CPP) -c libdsk-1.1.5/lib/compbz2.c -o libdsk-1.1.5/lib/compbz2.o $(CXXFLAGS)
+
+KOGEL/z80.o: KOGEL/z80.c
+	$(CPP) -c KOGEL/z80.c -o KOGEL/z80.o $(CXXFLAGS)
+
+KOGEL/KOGELMEM.o: KOGEL/KOGELMEM.CXX
+	$(CPP) -c KOGEL/KOGELMEM.CXX -o KOGEL/KOGELMEM.o $(CXXFLAGS)
+
+KOGEL/KOGELIO.o: KOGEL/KOGELIO.CXX
+	$(CPP) -c KOGEL/KOGELIO.CXX -o KOGEL/KOGELIO.o $(CXXFLAGS)
+
+PALESDL_private.res: PALESDL_private.rc 
+	$(WINDRES) -i PALESDL_private.rc --input-format=rc -o PALESDL_private.res -O coff 

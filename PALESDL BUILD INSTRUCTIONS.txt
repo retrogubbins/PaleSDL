@@ -1,0 +1,13 @@
+
+
+
+
+Change upper case L's in SDL MultilineOutput to lower case in the SDL includes in DEV-CPP
+
+
+
+OR
+
+
+ALTER lines 45 & 46 in the PALESDLGUI.H file to call the correct functions
+
