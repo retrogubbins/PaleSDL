@@ -81,11 +81,6 @@ extern "C" {
    void  z80_set_fetch_callback(void (*handler)(UWORD pc));
    void  z80_end_memmap(void);
 
-
-
-
-
-
 #ifdef __cplusplus
 };
 #endif
